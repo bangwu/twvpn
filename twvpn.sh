@@ -5,6 +5,7 @@ killall 'Cisco AnyConnect Secure Mobility Client' 2>/dev/null
 
 AUTH_CODE=$(security find-generic-password -a auth_code -s playground -w)
 USER_NAME=$(security find-generic-password -a user_name -s playground -w)
+VPN_URL=$(security find-generic-password -a vpn_url -s playground -w)
 PASSWORD=$(security find-generic-password -a password -s playground -w)
 VALIDATE_TYPE=$(security find-generic-password -a validate_type -s playground -w)
 code=`oathtool --totp -b $AUTH_CODE`
